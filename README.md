@@ -1,2 +1,0 @@
-# simplemaths
-Simple Maths app
