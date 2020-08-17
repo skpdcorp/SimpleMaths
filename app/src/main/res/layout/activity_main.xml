@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00000000"
+    android:orientation="vertical"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintBottom_toTopOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintEnd_toStartOf="parent"
+
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/appName"
+        android:layout_width="259dp"
+        android:layout_height="70dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="100dp"
+        android:fontFamily="cursive"
+        android:gravity="center"
+        android:text="@string/appName"
+        android:textAllCaps="false"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textColorLink="#D32F2F"
+        android:textSize="36sp"
+        android:textStyle="bold|italic" />
+
+    <EditText
+        android:id="@+id/userName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="42dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:cursorVisible="true"
+        android:gravity="center|center_horizontal|center_vertical"
+        android:hint="@string/userNameHint"
+        android:text="@string/userName"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="24dp" />
+
+    <Button
+        android:id="@+id/enterButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="64dp"
+        android:layout_marginRight="64dp"
+        android:layout_marginBottom="16dp"
+        android:onClick="enter"
+        android:text="@string/button_addition" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="64dp"
+        android:layout_marginRight="64dp"
+        android:gravity="center"
+        android:onClick="multiply"
+        android:text="@string/button_multiplication" />
+</LinearLayout>
