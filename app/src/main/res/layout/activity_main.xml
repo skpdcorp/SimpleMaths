@@ -61,7 +61,18 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="64dp"
         android:layout_marginRight="64dp"
+        android:layout_marginBottom="16dp"
         android:gravity="center"
         android:onClick="multiply"
         android:text="@string/button_multiplication" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="64dp"
+        android:layout_marginRight="64dp"
+        android:gravity="center"
+        android:onClick="division"
+        android:text="@string/button_division" />
 </LinearLayout>
