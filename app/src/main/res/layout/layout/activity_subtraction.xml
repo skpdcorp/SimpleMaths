@@ -5,7 +5,7 @@
     android:id="@+id/activity_addition"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Addition">
+    tools:context=".DivisionActivity">
 
     <TextView
         android:id="@+id/add_number1"
@@ -95,7 +95,7 @@
         android:ems="10"
         android:gravity="center_horizontal"
         android:inputType="text"
-        android:text="@string/add_symbol"
+        android:text="@string/symbol_subtr"
         android:textSize="36sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/add_number1"
         app:layout_constraintEnd_toStartOf="@+id/add_number2"

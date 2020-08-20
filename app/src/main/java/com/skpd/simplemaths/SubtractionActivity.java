@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
 import android.os.Bundle;
+import android.service.autofill.ImageTransformation;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
@@ -13,15 +14,16 @@ import com.skpd.simplemaths.util.MathFunctions;
 
 import java.util.Random;
 
-public class DivisionActivity extends AppCompatActivity implements MathBase{
+public class SubtractionActivity extends AppCompatActivity implements MathBase {
+
     public static final String BLANK_SPACE=" ";
     private MathFunctions mathFunctions;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_division);
-        setTitle("Division");
+        setContentView(R.layout.activity_subtraction);
+        setTitle("Subtraction");
 
         mathFunctions = new MathFunctions();
 
@@ -35,7 +37,7 @@ public class DivisionActivity extends AppCompatActivity implements MathBase{
 
 
         TextView txt_view_symbol = findViewById(R.id.add_symbol);
-        txt_view_symbol.setText("÷");
+        txt_view_symbol.setText("-");
 
 
         generateNumbers();
@@ -43,7 +45,6 @@ public class DivisionActivity extends AppCompatActivity implements MathBase{
 
     @Override
     public void checkAnswer(View view) {
-
         TextView txtVUserAns = findViewById(R.id.add_user_answer);
         String str_userAnswer=txtVUserAns.getText().toString();
         long userAnswer= Long.parseLong((str_userAnswer==null || str_userAnswer.equals(""))?"0":str_userAnswer);
@@ -85,7 +86,7 @@ public class DivisionActivity extends AppCompatActivity implements MathBase{
         TextView txtVSecondNum = findViewById(R.id.add_number2);
         int firstNum = (int) Long.parseLong(txtVFirstNum.getText().toString());
         long secondNum = Long.parseLong(txtVSecondNum.getText().toString());
-        long answer = mathFunctions.divide(firstNum, (int) secondNum);
+        long answer = mathFunctions.subtract(firstNum, (int) secondNum);
         Log.i("User Answer:",String.valueOf(answer));
         return answer;
     }
@@ -96,23 +97,15 @@ public class DivisionActivity extends AppCompatActivity implements MathBase{
         Random random = new Random();
         int firstNum = random.nextInt(1000)+1;
         Log.i("first number:",String.valueOf(firstNum));
-        int secondNum = random.nextInt(20)+1;
+        int secondNum = random.nextInt(1000)+1;
         Log.i("second number:",String.valueOf(secondNum));
 
-        if (firstNum == 0 || secondNum == 0 || firstNum == 1 || secondNum == 1){
-            generateNumbers();
+        if (firstNum > secondNum){
+            txt_view_number1.setText(""+firstNum);
+            txt_view_number2.setText(""+secondNum);
+        } else{
+            txt_view_number1.setText(""+secondNum);
+            txt_view_number2.setText(""+(firstNum));
         }
-        int remainder = mod(firstNum,secondNum);
-        Log.i("remainder:",String.valueOf(remainder));
-        txt_view_number1.setText(""+(firstNum-remainder));
-        txt_view_number2.setText(""+(secondNum));
-    }
-
-    private int mod(int x, int y)
-    {
-        int result = x % y;
-        if (result < 0)
-            result += y;
-        return result;
     }
 }

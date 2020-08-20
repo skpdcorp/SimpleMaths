@@ -32,7 +32,7 @@
     <string name="add_symbol">+</string>
     <string name="add_welcome_msg_1">Welcome </string>
     <string name="add_welcome_msg_2">! </string>
-    <string name="add_division">/</string>
+    <string name="add_division">÷</string>
 
     <string name="main_button_addition">Addition</string>
     <string name="app" />
@@ -43,5 +43,6 @@
     <string name="button_division">Division</string>
     <string name="division_Number1">0.0</string>
     <string name="division_number_2">0.0</string>
+    <string name="symbol_subtr">-</string>
 
 </resources>

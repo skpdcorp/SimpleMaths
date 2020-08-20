@@ -40,4 +40,11 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra(USER_NAME,userName);
         startActivity(intent);
     }
+    public void subtract(View view){
+        Intent intent = new Intent(this,SubtractionActivity.class);
+        EditText txt_userName = findViewById(R.id.userName);
+        String userName = txt_userName.getText().toString();
+        intent.putExtra(USER_NAME,userName);
+        startActivity(intent);
+    }
 }
