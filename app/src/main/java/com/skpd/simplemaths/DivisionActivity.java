@@ -20,7 +20,7 @@ public class DivisionActivity extends AppCompatActivity implements MathBase{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_division);
+        setContentView(R.layout.activity_addition);
         setTitle("Division");
 
         mathFunctions = new MathFunctions();

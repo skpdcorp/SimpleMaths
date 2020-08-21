@@ -22,7 +22,7 @@ public class SubtractionActivity extends AppCompatActivity implements MathBase {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_subtraction);
+        setContentView(R.layout.activity_addition);
         setTitle("Subtraction");
 
         mathFunctions = new MathFunctions();
